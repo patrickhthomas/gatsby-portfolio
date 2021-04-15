@@ -1,0 +1,78 @@
+.hero {
+  position: relative;
+  background: #000;
+  color: #fff;
+  text-align: left;
+  width: 100%;
+}
+
+.heroImage {
+  /*
+    Ensure golden ratio for the hero size while limiting it to some extend to
+    the viewport width
+  */
+ display: flexbox;
+ position: absolute;
+ width: 100%;
+ margin: auto;
+ bottom: 10%;
+ transform: scale(2.5);
+}
+
+.imageContainer {
+    display: flex;
+    height: 61.8vh;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.heroDetails {
+  box-sizing: border-box;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  font-size: 14px;
+  padding: 0 0.5em;
+  width: 100%;
+  backdrop-filter: blur(5px);
+}
+
+@media(min-width: 600px) {
+  .heroDetails {
+    font-size: 16px;
+  }
+    .heroImage {
+      bottom: 35%;
+      transform: scale(1.8);
+    }
+}
+
+@media(min-width: 1000px) {
+  .heroDetails {
+    font-size: 20px;
+  }
+  .heroImage {
+    bottom: 105%;
+  }
+}
+
+.heroHeadline {
+  margin: auto;
+  width: calc(100% - 10vmin);
+  padding-top: .5em;
+}
+
+.heroTitle {
+  margin: auto;
+  width: calc(100% - 10vmin);
+  font-size: 1.125em;
+  font-weight: bold;
+}
+
+.shortBio {
+  margin: auto;
+  width: calc(100% - 10vmin);
+  padding-bottom: 1em;
+}
